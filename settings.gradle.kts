@@ -1,4 +1,4 @@
-rootProject.name = "kickAll"
+rootProject.name = "KickAll"
 
 pluginManagement {
     repositories {

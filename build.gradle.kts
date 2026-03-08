@@ -10,7 +10,7 @@ plugins {
     id("com.modrinth.minotaur") version "2.+" // cf https://github.com/modrinth/minotaur
 }
 
-group = "net.mvndicraft"
+group = "net.mvndicraft.kickall"
 version = "1.0.0"
 description = "Kick all players."
 java.sourceCompatibility = JavaVersion.VERSION_21
