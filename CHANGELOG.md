@@ -1,5 +1,5 @@
 # 1.0.1
-Support from 1.20 to 26.1.2
+Auto publish
 
 # 1.0.0
 Init project

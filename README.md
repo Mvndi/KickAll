@@ -1,3 +1,13 @@
+[download]: https://img.shields.io/github/downloads/Mvndi/KickAll/total
+[downloadLink]: https://hangar.papermc.io/Hydrolien/KickAll
+[discord-shield]: https://img.shields.io/discord/728592434577014825?label=discord
+[discord-invite]: https://discord.gg/RPNbtRSFqG
+
+[ ![download][] ][downloadLink]
+[ ![discord-shield][] ][discord-invite]
+
+[**Discord**](https://discord.gg/RPNbtRSFqG) | [**Modrinth**](https://modrinth.com/plugin/kickall) | [**Hangar**](https://hangar.papermc.io/Hydrolien/KickAll) | [**GitHub**](https://github.com/Mvndi/KickAll)
+
 # KickAll
 
 A simple kick all players command compatible with Paper, Folia and other paper forks.
@@ -18,7 +28,7 @@ Feature requests or pull requests are welcome. Concider creating an issue first 
 
 ## Build
 
-Clone the [repo](https://github.com/HydrolienF/VoidWorldGenerator) `git clone git@github.com:HydrolienF/VoidWorldGenerator.git`
+Clone the [repo](https://github.com/Mvndi/KickAll) `git clone git@github.com:Mvndi/KickAll.git`
 
 Build with `./gradlew assemble`. The plugin .jar file will be in `build/libs/`.
 
@@ -46,4 +56,4 @@ git push --tags
 ./gradlew clean publish
 ./gradlew jreleaserDeploy
 ```
-The published lib will be available [on maven central](https://central.sonatype.com/artifact/fr.formiko.mc.voidworldgenerator/voidworldgenerator).
+The published lib will be available [on maven central](https://central.sonatype.com/artifact/net.mvndicraft.kickall/kickall).
