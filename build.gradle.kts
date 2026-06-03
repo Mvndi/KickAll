@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "net.mvndicraft.kickall"
-version = "1.0.1"
+version = "1.0.2"
 description = "Kick all players with a single command"
 var mainMinecraftVersion = "1.21.11"
 val supportedMinecraftVersions = "1.20 - 1.21.11" // 26.1.2
@@ -114,13 +114,13 @@ publishing {
       pom {
         name.set(project.name.lowercase())
         packaging = "jar"
-        url.set("https://github.com/HydrolienF/${project.name}")
+        url.set("https://github.com/Mvndi/${project.name}")
         inceptionYear.set("2026")
         description = project.description
         licenses {
           license {
             name.set("MIT license")
-            url.set("https://github.com/HydrolienF/${project.name}/blob/master/LICENSE.md")
+            url.set("https://github.com/Mvndi/${project.name}/blob/master/LICENSE.md")
           }
         }
         developers {
@@ -131,9 +131,9 @@ publishing {
           }
         }
         scm {
-          connection.set("scm:git:git@github.com:HydrolienF/${project.name}.git")
-          developerConnection.set("scm:git:ssh:git@github.com:HydrolienF/${project.name}.git")
-          url.set("https://github.com/HydrolienF/${project.name}")
+          connection.set("scm:git:git@github.com:Mvndi/${project.name}.git")
+          developerConnection.set("scm:git:ssh:git@github.com:Mvndi/${project.name}.git")
+          url.set("https://github.com/Mvndi/${project.name}")
         }
       }
     }
@@ -241,7 +241,7 @@ hangarPublish { // ./gradlew publishPluginPublicationToHangar
         )
         platforms {
             register(io.papermc.hangarpublishplugin.model.Platforms.PAPER) {
-                url = "https://github.com/HydrolienF/"+project.name+"/releases/download/"+versionString+"/"+project.name+"-"+versionString+".jar"
+                url = "https://github.com/Mvndi/"+project.name+"/releases/download/"+versionString+"/"+project.name+"-"+versionString+".jar"
 
                 // Set platform versions from gradle.properties file
                 val versions: List<String> = supportedMinecraftVersions.replace(" ", "").split(",")
@@ -362,7 +362,7 @@ jreleaser {
         name.set("${project.name}")
         copyright.set("Hydrolien")
         description.set(findProperty("description")?.toString() ?: "Default description")
-        website.set("https://github.com/HydrolienF/${project.name}")
+        website.set("https://github.com/Mvndi/${project.name}")
     }
 
     deploy {

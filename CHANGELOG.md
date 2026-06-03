@@ -1,3 +1,6 @@
+# 1.0.2
+Fix auto publish
+
 # 1.0.1
 Auto publish
 
