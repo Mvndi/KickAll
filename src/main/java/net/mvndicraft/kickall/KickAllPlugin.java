@@ -10,10 +10,10 @@ public final class KickAllPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        new Metrics(this, 25354);
+        new Metrics(this, 31780);
 
         // Save config in our plugin data folder if it does not exist.
-        saveDefaultConfig();
+        // saveDefaultConfig();
 
         PaperCommandManager manager = new PaperCommandManager(this);
         manager.registerCommand(new KickAllCommand());
