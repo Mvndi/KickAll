@@ -1,16 +1,22 @@
 package net.mvndicraft.kickall;
 
 import co.aikar.commands.PaperCommandManager;
+import dev.faststats.Metrics.Factory;
+import dev.faststats.bukkit.BukkitContext;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class KickAllPlugin extends JavaPlugin {
+    private final BukkitContext context = new BukkitContext.Factory(this, "7fb05365e4ecea16d35975e99f396718")
+        .metrics(Factory::create)
+        .create();
 
     @Override
     public void onEnable() {
         new Metrics(this, 31780);
+        context.ready();
 
         // Save config in our plugin data folder if it does not exist.
         // saveDefaultConfig();
@@ -20,6 +26,11 @@ public final class KickAllPlugin extends JavaPlugin {
     }
 
     public static KickAllPlugin getInstance() { return JavaPlugin.getPlugin(KickAllPlugin.class); }
+
+    @Override
+    public void onDisable() {
+        context.shutdown();
+    }
 
     // Usual log with debug level
     public static void log(Level level, String message) { getInstance().getLogger().log(level, message); }

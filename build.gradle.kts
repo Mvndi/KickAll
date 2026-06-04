@@ -26,6 +26,7 @@ repositories {
     // Paper
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.aikar.co/content/groups/aikar/")
+    maven("https://repo.faststats.dev/releases")
 }
 
 dependencies {
@@ -33,6 +34,7 @@ dependencies {
     // compileOnly("io.papermc.paper:paper-api:$mainMinecraftVersion.build.+")
 
     implementation("org.bstats:bstats-bukkit:3.2.1")
+    implementation("dev.faststats.metrics:bukkit:0.25.0")
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.0")
