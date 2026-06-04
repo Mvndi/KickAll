@@ -13,10 +13,10 @@ plugins {
 }
 
 group = "net.mvndicraft.kickall"
-version = "1.0.2"
+version = "1.0.3"
 description = "Kick all players with a single command"
 var mainMinecraftVersion = "1.21.11"
-val supportedMinecraftVersions = "1.20 - 1.21.11" // 26.1.2
+val supportedMinecraftVersions = "1.20 - 26.1.2"
 
 
 repositories {
