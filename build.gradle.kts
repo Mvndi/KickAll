@@ -13,10 +13,10 @@ plugins {
 }
 
 group = "net.mvndicraft.kickall"
-version = "1.0.3"
+version = "1.0.4"
 description = "Kick all players with a single command"
-var mainMinecraftVersion = "1.21.11"
-val supportedMinecraftVersions = "1.20 - 26.1.2"
+var mainMinecraftVersion = "26.2"
+val supportedMinecraftVersions = "1.20 - 26.2"
 
 
 repositories {
@@ -30,8 +30,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:$mainMinecraftVersion-R0.1-SNAPSHOT")
-    // compileOnly("io.papermc.paper:paper-api:$mainMinecraftVersion.build.+")
+    // compileOnly("io.papermc.paper:paper-api:$mainMinecraftVersion-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:$mainMinecraftVersion.build.+")
 
     implementation("org.bstats:bstats-bukkit:3.2.1")
     implementation("dev.faststats.metrics:bukkit:0.25.0")
@@ -43,7 +43,7 @@ dependencies {
 
 java {
     // Configure the java toolchain. This allows gradle to auto-provision JDK 21 on systems that only have JDK 8 installed for example.
-    toolchain.languageVersion.set(JavaLanguageVersion.of(21)) // 25
+    toolchain.languageVersion.set(JavaLanguageVersion.of(25)) 
     withJavadocJar()
     withSourcesJar()
 }
@@ -259,7 +259,8 @@ fun expandMinecraftVersions(range: String): List<String> {
     val latestPatches = linkedMapOf(
         "1.20" to 6,
         "1.21" to 11,
-        "26.1" to 2
+        "26.1" to 2,
+        "26.2" to 0
     )
 
     data class Version(
